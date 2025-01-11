@@ -7,7 +7,12 @@ const app = express();
 app.use(express.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 
-app.use(cors({ origin: 'https://hospital-food-mangement-frontend.onrender.com' }));
+
+app.use(cors({
+    origin: 'https://hospital-food-mangement-frontend.onrender.com',
+    credentials: true
+}));
+
 
 
 
