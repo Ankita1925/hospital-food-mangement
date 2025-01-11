@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bo
 app.use(cors({ origin: 'https://hospital-food-mangement-frontend.onrender.com' }));
 
 // Connect to MongoDB using Mongoose
-const mongoURL = "mongodb+srv://ankitasawant8998:KL5C9bSAq3ZckPsb@hospital-food-managemen.c2e3v.mongodb.net/?retryWrites=true&w=majority&appName=Hospital-food-management";
+const mongoURL = "mongodb+srv://ankitasawant8998:q0YLIy6v5hyTL5CS@hospital-food-magement.23ulk.mongodb.net/?retryWrites=true&w=majority&appName=hospital-food-magement";
 
 mongoose
     .connect(mongoURL, {
