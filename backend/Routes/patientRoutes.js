@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Patient = require('../models/patient'); // Import the Patient model
+const Patient = require('../models/Patient'); // Import the Patient model
 const { PatientSchema } = require('../utils/joiSchema/patient');
 const wrapAsync = require("../utils/wrapAsyncs");
 const ExpressError = require("../utils/ExpressError");

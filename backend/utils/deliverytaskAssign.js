@@ -1,5 +1,5 @@
 const DeliveryTask = require('../models/DeliveryTask'); // Import the DeliveryTask model
-const DeliveryPersonnel = require('../models/deliveryperson'); // Import the DeliveryPersonnel model
+const DeliveryPersonnel = require('../models/DeliveryPersonnel'); // Import the DeliveryPersonnel model
 const PreparationTask = require('../models/PreparationTask'); // Import the PreparationTask model
 
 const assignDeliveryTask = async (mealBoxId, patientInfo, mealTime) => {

@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const PreparationTask = require("../models/PreparationTask");  // Import Task model
-const PantryStaff = require('../models/pantryStaff');  // Import PantryStaff model
+const PantryStaff = require('../models/PantryStaff');  // Import PantryStaff model
 const DietChart = require('../models/dietChart');  // Import DietChart model
-const Patient = require('../models/patient');  // Import Patient model
+const Patient = require('../models/Patient');  // Import Patient model
 // const authMiddleware = require('../middleware/auth');  // JWT Authentication middleware
 const ExpressError = require("./ExpressError");
 const wrapAsync = require("./wrapAsyncs");

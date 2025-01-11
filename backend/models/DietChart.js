@@ -72,6 +72,6 @@ dietChartSchema.pre('save', async function (next) {
     next();
 });
 
-const DietChart = mongoose.model('DietChart', dietChartSchema);
+const DietChart = mongoose.models.DietChart || mongoose.model('DietChart', dietChartSchema);
 
 module.exports = DietChart;
