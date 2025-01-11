@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt'); // For password hashing
+const bcrypt = require('bcryptjs'); // For password hashing
 
 // Define the delivery personnel schema
 const deliveryPersonnelSchema = new mongoose.Schema({

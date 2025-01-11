@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // For password hashing
 const jwt = require('jsonwebtoken');
 const HospitalAdmin = require('../models/Admin'); // Model for Hospital Admin
 const ExpressError = require('../utils/ExpressError');

@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // For password hashing
 const jwt = require('jsonwebtoken');
 const PantryStaff = require('../models/PantryStaff');
 const { pantryStaffValidationSchema } = require('../utils/joiSchema/pantryStaff');

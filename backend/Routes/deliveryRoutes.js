@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // For password hashing
 const jwt = require('jsonwebtoken');
 const DeliveryTask = require('../models/DeliveryTask');
 const DeliveryPersonnel = require('../models/DeliveryPersonnel'); // Corrected model name
