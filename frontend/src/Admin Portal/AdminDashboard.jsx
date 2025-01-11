@@ -7,6 +7,7 @@ import PantryTaskManagement from "./pages/PantryTaskManagement";
 import MealDeliveryOverview from "./pages/MealDeliveryOverview";
 import PatientDetailsPage from "./pages/PatientDetailsPage";
 import AddPantryStaff from "./pages/AddPantryStaff";
+import logout from "./pages/logout";
 
 
 const AdminDashboard = () => {
@@ -27,6 +28,8 @@ const AdminDashboard = () => {
         return <PantryTaskManagement />;
       case "Add-Pantry-Staff":
         return <AddPantryStaff />;
+        case "logout":
+        return <logout />;
 
       default:
         return <MealDeliveryOverview />;
