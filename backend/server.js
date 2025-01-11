@@ -7,8 +7,25 @@ const app = express();
 app.use(express.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 
-// Allow cross-origin requests from your frontend
-app.use(cors({ origin: 'https://hospital-food-mangement-frontend.onrender.com' }));
+const cors = require('cors');
+
+const allowedOrigins = [
+  'http://localhost:5173', // Allow local development server
+  'https://hospital-food-mangement-frontend.onrender.com' // Allow Render frontend
+];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+
 
 // Connect to MongoDB using Mongoose
 const mongoURL = "mongodb://127.0.0.1:27017/Hospital_food";
