@@ -8,7 +8,7 @@ app.use(express.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 
 // Allow cross-origin requests from your frontend
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://hospital-food-mangement-frontend.onrender.com' }));
 
 // Connect to MongoDB using Mongoose
 const mongoURL = "mongodb://127.0.0.1:27017/Hospital_food";
