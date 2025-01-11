@@ -228,6 +228,7 @@ const PatientDetailsPage = () => {
                 <table className="patient-table">
                     <thead>
                         <tr>
+                            <th>id</th>
                             <th>Name</th>
                             <th>Age</th>
                             <th>Gender</th>
@@ -238,6 +239,7 @@ const PatientDetailsPage = () => {
                     <tbody>
                         {patients.map((patient) => (
                             <tr key={patient._id}>
+                                <td>{patient._id}</td>
                                 <td>{patient.name}</td>
                                 <td>{patient.age}</td>
                                 <td>{patient.gender}</td>
