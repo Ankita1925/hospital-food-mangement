@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const DietChart = require('../models/dietChart');
+const DietChart = require('../models/DietChart');
 const Patient = require('../models/patient');
 const wrapAsync = require("../utils/wrapAsyncs");
 const ExpressError = require("../utils/ExpressError");
