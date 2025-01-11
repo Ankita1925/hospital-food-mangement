@@ -7,8 +7,18 @@ const app = express();
 app.use(express.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 
-// Allow cross-origin requests from your frontend
-app.use(cors({ origin: 'https://hospital-food-mangement-frontend.onrender.com' }));
+
+const corsOptions = {
+    origin: [
+        'https://hospital-food-mangement-frontend.onrender.com', // Deployed frontend
+        'http://localhost:5173' // Local development (optional)
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true // If cookies or credentials are required
+};
+
+app.use(cors(corsOptions));
+
 
 // Connect to MongoDB using Mongoose
 const mongoURL = "mongodb+srv://ankitasawant8998:q0YLIy6v5hyTL5CS@hospital-food-magement.23ulk.mongodb.net/?retryWrites=true&w=majority&appName=hospital-food-magement";
