@@ -1,7 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const DietChart = require('../models/DietChart');
+<<<<<<< HEAD
 const Patient = require('../models/Patient');
+=======
+const Patient = require('../models/patient');
+>>>>>>> 2d67cb755b7593baf738e34563bdbe6ae11e0713
 const wrapAsync = require("../utils/wrapAsyncs");
 const ExpressError = require("../utils/ExpressError");
 const assignTask = require("../utils/preprationTaskAssign");
