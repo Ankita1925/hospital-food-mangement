@@ -3,9 +3,7 @@ const Counter = require('./Counter'); // Import the counter model
 
 const dietChartSchema = new mongoose.Schema({
     chartId: {
-        type: Number,
-        required: true,
-        unique: true,
+        type: Number
     },
     patientId: {
         type: mongoose.Schema.Types.ObjectId, // Reference to the Patient model
@@ -48,8 +46,8 @@ const dietChartSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['Pending', 'In Process', 'Completed'],
-        default: 'Active',
+        enum: ['Pending', 'In Process', 'Completed', 'Active'],
+        default: 'Pending',
     },
     updatedBy: {
         type: mongoose.Schema.Types.ObjectId,
@@ -72,6 +70,6 @@ dietChartSchema.pre('save', async function (next) {
     next();
 });
 
-const DietChart = mongoose.models.DietChart || mongoose.model('DietChart', dietChartSchema);
+const DietChart = mongoose.model('DietChart', dietChartSchema);
 
 module.exports = DietChart;
